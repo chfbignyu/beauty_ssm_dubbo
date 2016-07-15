@@ -1,14 +1,14 @@
 package com.yingjun.ssm.common.util;
 
-import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
-import java.io.IOException;
-import java.util.List;
-
 import com.dyuproject.protostuff.LinkedBuffer;
 import com.dyuproject.protostuff.ProtostuffIOUtil;
 import com.dyuproject.protostuff.Schema;
 import com.dyuproject.protostuff.runtime.RuntimeSchema;
+
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.util.List;
 
 /**
  * 序列话工具
@@ -52,8 +52,10 @@ public class ProtoStuffSerializerUtil {
 		T instance = null;
 		try {
 			instance = targetClass.newInstance();
-		} catch (InstantiationException | IllegalAccessException e) {
-			throw new RuntimeException("反序列化过程中依据类型创建对象失败!", e);
+		} catch (InstantiationException  e1) {
+			throw new RuntimeException("反序列化过程中依据类型创建对象失败!", e1);
+		} catch(IllegalAccessException e2){
+			throw new RuntimeException("反序列化过程中依据类型创建对象失败!", e2);
 		}
 		Schema<T> schema = RuntimeSchema.getSchema(targetClass);
 		ProtostuffIOUtil.mergeFrom(paramArrayOfByte, instance, schema);

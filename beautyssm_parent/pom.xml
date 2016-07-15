@@ -1,28 +1,42 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.yingjun.ssm</groupId>
 	<artifactId>beautyssm_parent</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
 	<packaging>pom</packaging>
 
 	<properties>
 
-		<beautyssm_common.version>1.0-SNAPSHOT</beautyssm_common.version>
+		<beautyssm_common.version>1.0.0</beautyssm_common.version>
 
-		<beautyssm_api_user.version>1.0-SNAPSHOT</beautyssm_api_user.version>
-		<beautyssm_api_goods.version>1.0-SNAPSHOT</beautyssm_api_goods.version>
+		<beautyssm_api_user.version>1.0.0</beautyssm_api_user.version>
+		<beautyssm_api_goods.version>1.0.0</beautyssm_api_goods.version>
 
-		<beautyssm_service_user.version>1.0-SNAPSHOT</beautyssm_service_user.version>
-		<beautyssm_service_goods.version>1.0-SNAPSHOT</beautyssm_service_goods.version>
+		<beautyssm_service_user.version>1.0.0</beautyssm_service_user.version>
+		<beautyssm_service_goods.version>1.0.0</beautyssm_service_goods.version>
 
-		<beautyssm_web_user.version>1.0-SNAPSHOT</beautyssm_web_user.version>
-		<beautyssm_web_goods.version>1.0-SNAPSHOT</beautyssm_web_goods.version>
+		<beautyssm_web_user.version>1.0.0</beautyssm_web_user.version>
+		<beautyssm_web_goods.version>1.0.0</beautyssm_web_goods.version>
 
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.build.timestamp.format>yyyyMMdd</maven.build.timestamp.format>
 		<spring.version>4.2.0.RELEASE</spring.version>
+
 	</properties>
+
+	<modules>
+		<module>../beautyssm_common</module>
+
+		<module>../beautyssm_api_user</module>
+		<module>../beautyssm_service_user</module>
+		<module>../beautyssm_web_user</module>
+
+		<module>../beautyssm_api_goods</module>
+		<module>../beautyssm_service_goods</module>
+		<module>../beautyssm_web_goods</module>
+	</modules>
 
 	<dependencies>
 		<!--common start -->

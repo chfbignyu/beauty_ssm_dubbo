@@ -1,7 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-
+	
 	<parent>
 		<groupId>com.yingjun.ssm</groupId>
 		<artifactId>beautyssm_parent</artifactId>
@@ -9,19 +9,18 @@
 		<relativePath>../beautyssm_parent</relativePath>
 	</parent>
 
-	<artifactId>beautyssm_api_user</artifactId>
-	<version>${beautyssm_api_user.version}</version>
-	<packaging>jar</packaging>
-
+	<artifactId>beautyssm_web_goods</artifactId>
+	<version>${beautyssm_web_goods.version}</version>
+	<packaging>war</packaging>
 
 	<dependencies>
 
 		<dependency>
 			<groupId>com.yingjun.ssm</groupId>
-			<artifactId>beautyssm_common</artifactId>
-			<version>${beautyssm_common.version}</version>
+			<artifactId>beautyssm_service_goods</artifactId>
+			<version>${beautyssm_service_goods.version}</version>
 		</dependency>
-		
+
 	</dependencies>
 
 </project>

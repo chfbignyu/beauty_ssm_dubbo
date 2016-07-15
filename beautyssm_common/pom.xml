@@ -9,9 +9,9 @@
 		<relativePath>../beautyssm_parent</relativePath>
 	</parent>
 
-	<groupId>com.yingjun.ssm.common</groupId>
 	<artifactId>beautyssm_common</artifactId>
 	<version>${beautyssm_common.version}</version>
 	<packaging>jar</packaging>
+
 
 </project>

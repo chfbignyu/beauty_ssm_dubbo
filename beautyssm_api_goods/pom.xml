@@ -9,19 +9,26 @@
 		<relativePath>../beautyssm_parent</relativePath>
 	</parent>
 
-	<artifactId>beautyssm_api_user</artifactId>
-	<version>${beautyssm_api_user.version}</version>
+	<artifactId>beautyssm_api_goods</artifactId>
+	<version>${beautyssm_api_goods.version}</version>
 	<packaging>jar</packaging>
 
 
 	<dependencies>
-
+	
 		<dependency>
 			<groupId>com.yingjun.ssm</groupId>
 			<artifactId>beautyssm_common</artifactId>
 			<version>${beautyssm_common.version}</version>
 		</dependency>
 		
+		<dependency>
+			<groupId>com.yingjun.ssm</groupId>
+			<artifactId>beautyssm_api_user</artifactId>
+			<version>${beautyssm_api_user.version}</version>
+		</dependency>
+		
 	</dependencies>
+
 
 </project>

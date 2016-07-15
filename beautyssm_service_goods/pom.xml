@@ -9,17 +9,16 @@
 		<relativePath>../beautyssm_parent</relativePath>
 	</parent>
 
-	<artifactId>beautyssm_api_user</artifactId>
-	<version>${beautyssm_api_user.version}</version>
+	<artifactId>beautyssm_service_goods</artifactId>
+	<version>${beautyssm_service_goods.version}</version>
 	<packaging>jar</packaging>
-
-
+	
 	<dependencies>
-
+		
 		<dependency>
 			<groupId>com.yingjun.ssm</groupId>
-			<artifactId>beautyssm_common</artifactId>
-			<version>${beautyssm_common.version}</version>
+			<artifactId>beautyssm_api_goods</artifactId>
+			<version>${beautyssm_api_goods.version}</version>
 		</dependency>
 		
 	</dependencies>
