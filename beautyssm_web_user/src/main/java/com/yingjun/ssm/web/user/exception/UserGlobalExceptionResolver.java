@@ -26,7 +26,7 @@ public class UserGlobalExceptionResolver implements HandlerExceptionResolver {
 	
 	@ResponseBody
 	public ModelAndView resolveException(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex) {
-		LOG.error("访问" + request.getRequestURI() + " 发生错误, 错误信息 :" + ex.getStackTrace());
+		LOG.error("访问" + request.getRequestURI() + " 发生错误, 错误信息 :" + ex.getMessage());
 		try {
 			PrintWriter writer = response.getWriter();
 			BaseResult<String> result=new BaseResult(false, ex.getMessage());

@@ -1,11 +1,10 @@
 package com.yingjun.ssm.core.goods.dao;
 
-import java.util.List;
-import java.util.Map;
-
+import com.yingjun.ssm.api.goods.entity.Goods;
 import org.apache.ibatis.annotations.Param;
 
-import com.yingjun.ssm.api.goods.entity.Goods;
+import java.util.List;
+import java.util.Map;
 
 
 

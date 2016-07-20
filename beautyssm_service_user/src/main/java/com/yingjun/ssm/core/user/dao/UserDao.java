@@ -30,6 +30,6 @@ public interface UserDao {
     /**
      * 增加积分
      */
-    void addScore(@Param("add")int add);
+    int addScore(@Param("add")int add);
 	
 }

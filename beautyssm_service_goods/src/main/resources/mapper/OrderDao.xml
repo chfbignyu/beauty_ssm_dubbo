@@ -10,16 +10,6 @@
 		(#{userId},#{goodsId},#{title})
 	</insert>
 
-	<select id="queryByUserPhone" resultType="Order">
-		SELECT *
-		FROM
-		_order, _user
-		WHERE
-		_order.user_id=_user.user_id
-		AND
-		_user.user_phone=#{userPhone}
-	</select>
-
 	<select id="queryAll" resultType="Order">
 		SELECT *
 		FROM _order

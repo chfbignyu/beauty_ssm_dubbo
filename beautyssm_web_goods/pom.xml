@@ -17,8 +17,8 @@
 
 		<dependency>
 			<groupId>com.yingjun.ssm</groupId>
-			<artifactId>beautyssm_service_goods</artifactId>
-			<version>${beautyssm_service_goods.version}</version>
+			<artifactId>beautyssm_api_goods</artifactId>
+			<version>${beautyssm_api_goods.version}</version>
 		</dependency>
 
 	</dependencies>

@@ -10,6 +10,11 @@
 		http://www.springframework.org/schema/mvc 
 		http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
+    <!--导入common的配置文件-->
+    <import resource="classpath:spring/spring-config.xml"/>
+    <!--作为消费者导入远程接口-->
+    <import resource="classpath:dubbo/dubbo-consumer.xml"/>
+
     <!--配置springMVC-->
 
     <!--1:开始springMVC注解模式-->

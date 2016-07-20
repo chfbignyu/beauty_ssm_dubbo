@@ -18,15 +18,7 @@ public interface OrderDao {
      */
     int insertOrder(@Param("userId") long userId,@Param("goodsId") long goodsId, @Param("title")String title);
 
-    /**
-     * 根据用户手机号查询订单
-     *
-     * @param userPhone
-     * @return
-     */
-    List<Order> queryByUserPhone(@Param("userPhone") long userPhone);
 
-	
     /**
      * 根据偏移量查询订单列表
      * @param offset

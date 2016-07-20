@@ -1,15 +1,15 @@
 package com.yingjun.ssm.api.goods.entity;
 
-import java.util.Date;
-
-import javax.validation.constraints.Min;
-
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.yingjun.ssm.api.goods.utils.CustomDateSerializer;
 import com.yingjun.ssm.common.validator.Not999;
 
-public class Goods {
+import javax.validation.constraints.Min;
+import java.io.Serializable;
+import java.util.Date;
+
+public class Goods implements Serializable {
 
 	@Min(900)
 	@Not999 //这个为自定义的验证标签

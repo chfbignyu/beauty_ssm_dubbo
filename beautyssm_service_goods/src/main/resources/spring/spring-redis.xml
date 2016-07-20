@@ -10,8 +10,6 @@
 
 	<!-- 缓存的层级-->
  	<context:component-scan base-package="com.yingjun.ssm.common.util.cache" />
-	<!-- 引入redis配置 -->
- 	<context:property-placeholder location="classpath:redis.properties" ignore-unresolvable="true"/>
 
 	<!-- Redis 配置 -->
 	<bean id="jedisPoolConfig" class="redis.clients.jedis.JedisPoolConfig">

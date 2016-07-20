@@ -1,20 +1,18 @@
 package com.yingjun.ssm.api.user.service.impl;
 
 
-import java.util.List;
-
+import com.yingjun.ssm.api.user.entity.User;
+import com.yingjun.ssm.api.user.service.UserService;
+import com.yingjun.ssm.common.util.cache.RedisCache;
+import com.yingjun.ssm.core.user.dao.UserDao;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.yingjun.ssm.api.user.entity.User;
-import com.yingjun.ssm.api.user.service.UserService;
-import com.yingjun.ssm.common.util.cache.RedisCache;
-import com.yingjun.ssm.core.user.dao.UserDao;
+import java.util.List;
 
-
-@Service
+@Service("userService")
 public class UserServiceImpl implements UserService {
 
 	private final Logger LOG = LoggerFactory.getLogger(this.getClass());
@@ -39,7 +37,21 @@ public class UserServiceImpl implements UserService {
 		}
 		return result_cache;
 	}
-	
-	
+
+	@Override
+	public User queryByPhone(long userPhone) {
+		return userDao.queryByPhone(userPhone);
+	}
+
+	@Override
+	public int addScoreBySyn(int score) {
+		int result=userDao.addScore(score);
+		return result;
+	}
+
+	@Override
+	public int addScoreByAsy(int score) {
+		return -1;
+	}
 
 }

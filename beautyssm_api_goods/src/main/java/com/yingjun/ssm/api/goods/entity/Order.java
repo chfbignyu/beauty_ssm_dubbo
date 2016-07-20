@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.yingjun.ssm.api.goods.utils.CustomDateSerializer;
 import com.yingjun.ssm.api.user.entity.User;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
@@ -11,7 +12,7 @@ import java.util.Date;
  * @author yingjun
  *
  */
-public class Order {
+public class Order implements Serializable {
 	
 	private long orderId;
 	

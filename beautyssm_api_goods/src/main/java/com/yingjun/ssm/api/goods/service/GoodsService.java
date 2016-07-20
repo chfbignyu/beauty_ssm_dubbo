@@ -26,7 +26,20 @@ public interface GoodsService {
 	 * @param useProcedure
 	 *            是否用存储过程提高并发能力
 	 */
-	
 	void buyGoods(long userPhone, long goodsId, boolean useProcedure);
+
+
+	/**
+	 * 仅仅是为了测试下分布式事务(同步请求模式)
+	 * @param goodsid
+	 */
+	void testDistributedTransaction(long goodsid);
+
+
+	/**
+	 * 仅仅是为了测试下分布式事务(异步请求模式)
+	 * @param goodsid
+     */
+	void testDistributedTransactionByAsy(long goodsid);
 
 }

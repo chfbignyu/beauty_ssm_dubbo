@@ -1,8 +1,9 @@
 package com.yingjun.ssm.api.user.entity;
 
-import java.util.Date;
-
 import com.fasterxml.jackson.annotation.JsonFormat;
+
+import java.io.Serializable;
+import java.util.Date;
 
 
 
@@ -11,7 +12,7 @@ import com.fasterxml.jackson.annotation.JsonFormat;
  * @author yingjun
  *
  */
-public class User {
+public class User implements Serializable{
 	
 	private long userId;
 	

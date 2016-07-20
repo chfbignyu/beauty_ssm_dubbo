@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.yingjun.ssm</groupId>
 	<artifactId>beautyssm_parent</artifactId>
-	<version>0.0.1</version>
+	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
 	<properties>
@@ -38,6 +38,7 @@
 		<module>../beautyssm_web_goods</module>
 	</modules>
 
+
 	<dependencies>
 		<!--common start -->
 		<dependency>
@@ -47,9 +48,19 @@
 		</dependency>
 
 		<dependency>
-			<groupId>ch.qos.logback</groupId>
-			<artifactId>logback-classic</artifactId>
-			<version>1.1.3</version>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.17</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>1.7.5</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>1.7.5</version>
 		</dependency>
 
 		<dependency>
@@ -99,8 +110,30 @@
 			<artifactId>httpclient</artifactId>
 			<version>4.5</version>
 		</dependency>
-
 		<!--common end -->
+
+		<!--dubbo start -->
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>dubbo</artifactId>
+			<version>2.8.4</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.zookeeper</groupId>
+			<artifactId>zookeeper</artifactId>
+			<version>3.4.6</version>
+		</dependency>
+		<dependency>
+			<groupId>com.101tec</groupId>
+			<artifactId>zkclient</artifactId>
+			<version>0.8</version>
+		</dependency>
+		<dependency>
+			<groupId>org.javassist</groupId>
+			<artifactId>javassist</artifactId>
+			<version>3.18.1-GA</version>
+		</dependency>
+		<!--dubbo end -->
 
 		<!--spring start -->
 		<dependency>
@@ -255,15 +288,7 @@
 	<!-- Build Settings -->
 	<!--http://maven.apache.org/pom.html#Build_Settings -->
 	<build>
-		<finalName>${project.artifactId}_${project.version}</finalName>
-		<resources>
-			<resource>
-				<!--directory: 资源所在的位置 -->
-				<directory>src/main/resources</directory>
-				<!--filtering: 是否替换资源中的属性placehold -->
-				<filtering>true</filtering>
-			</resource>
-		</resources>
+		<finalName>${project.artifactId}-${project.version}</finalName>
 		<plugins>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
