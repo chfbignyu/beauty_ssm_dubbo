@@ -1,7 +1,7 @@
 #将"优雅的SSM框架"拆分为分布式架构(基于dubbo+zookeeper)
 - Maven（模块化构建）
 - Spring（IOC DI 声明式事务处理）
-- SpringMVC（支持Restful风格）
+- SpringMVC（支持RESTful风格）
 - Hibernate Validate（参数校验）
 - Mybatis（最少配置方案）
 - Quartz时间调度
